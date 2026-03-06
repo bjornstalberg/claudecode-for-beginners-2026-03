@@ -23,8 +23,6 @@
 
 We'll go over two different exercises where we'll work together with Claude Code to perform programming tasks; the exercises can be carried out locally on your machine or in _GitHub Codespaces_.
 
-# Getting Started
-
 ## Fork the Repository
 
 You'll work on your own fork of this repository. To get started, locate the fork button at the top of the repository page, next to _Watch_ and _Star_.
@@ -84,6 +82,28 @@ Start Claude Code by:
 
 Select the option to authenticate with a Claude subscription and use your account to sign in.
 
-# Exercise #1 - Refactor the Asset Management Application
+# Claude Configuration
 
-# Exercise #2 - Create an Application from Scratch
+# Sandboxing
+
+# Exercises
+
+## E1 - Refactor the Asset Management Application
+
+This is a Web API application written in Python and that uses Fast API, it supports a ficticious system used to manage hardware assets in an organisateion. The code is found under `asset_managemente_app`. We are going to refactor this application to add a couple of new features and improvements assisted with Claude Code.
+
+Refactoring tasks:
+1. Add a new endpoin which allows adding one or more tags to an asset.
+2. Ability to activate or deactivate an asset, remind Claude that it inactive assets should not be listed by default; for audit purposes we should now when the asset was deactivated and by who
+3. Ability to decomission an asset, this is a permanent action and we should include when the asset was decomissioned and by who
+3. Show the details of an asset by its ID, inactive and decomissioned assets can be looked up.
+
+## E2 - Create an Application from Scratch
+
+To complement the assets management system, we need a new Web API where assets can report all sort of security events caught by a local agent running on certain devices. The description and requirements have been documented under `threat_management_app/README.md`
+
+Things to do:
+- You may change the description or requirements as you wish, for example use a different programming language / stack, functional and security requirements, etc.
+- Instruct Claude to read the description and requirements in`threat_management_app/README.md` and implement the web api as well as testing it
+- Review its work and make any adjustments you may think necessary via direct prompts to claude and follow ups.
+

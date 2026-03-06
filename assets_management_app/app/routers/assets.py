@@ -16,9 +16,11 @@ def list_assets():
 
 @router.post("", response_model=Asset, status_code=201)
 def add_asset(payload: AssetCreate):
+    now = datetime.now(timezone.utc)
     asset = Asset(
         id=str(uuid.uuid4()),
-        created_at=datetime.now(timezone.utc),
+        created_at=now,
+        updated_at=now,
         **payload.model_dump(),
     )
     get_store()[asset.id] = asset
