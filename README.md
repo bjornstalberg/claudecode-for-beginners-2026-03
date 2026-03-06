@@ -23,7 +23,7 @@
 
 > **Note (local setup only):** If you plan to clone the repository using SSH, make sure to configure your [SSH Keys][gh-conf-ssh-keys] beforehand. Refer to the [troubleshooting guide][gh-troubleshoot-ssh-keys-conf] if you run into issues.
 
-# Exercises and Setup
+# Setup
 
 We'll go over two different exercises where we'll work together with Claude Code to perform programming tasks; the exercises can be carried out locally on your machine or in _GitHub Codespaces_.
 
@@ -94,21 +94,6 @@ Claude Code can be configured at two levels:
 - **`settings.json`** — a JSON file at `.claude/settings.json` in your project (or `~/.claude/settings.json` for user-wide settings). Use it to control tool permissions and environment variables. See the [settings reference][cc-settings] for the full list of options.
 
 **Permissions** let you control which tools Claude can use without asking. Rules are defined under a `permissions` key with `allow` and `deny` lists. Deny rules block an operation outright; allow rules let Claude proceed without prompting. See the [permissions documentation][cc-permissions] for the full syntax.
-
-```json
-{
-  "permissions": {
-    "allow": [
-      "Bash(pytest:*)",
-      "Bash(pip install:*)"
-    ],
-    "deny": [
-      "Bash(rm:*)",
-      "Bash(git push:*)"
-    ]
-  }
-}
-```
 
 # Sandboxing
 
